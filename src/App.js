@@ -1,22 +1,55 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar"; 
-import EnvironmentDay from "./pages/EnvironmentDay";
-import ShoppingCart from "./pages/ShoppingCart";
-import Home from "./pages/Home";
-  
-function App() {
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route exact path="/home" element={<Home/>} />
-        <Route exact path="/environment" element={<EnvironmentDay />} />
-        <Route path="/cart" element={<ShoppingCart />} />
-        {/* <Home/> */}
-      </Routes>
-    </>
-  );
+import Main from "./Main";
+import { NavLink } from "react-router-dom";
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm me-4">
+          <div className="container-fluid ms-4">
+            <NavLink className="navbar-brand fw-bold fs-5" to="/">
+              Praktikum List
+            </NavLink>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/environment">
+                    Environment Day
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/products">
+                    Products
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/cart">
+                    Cart
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <Main />
+      </div>
+    );
+  }
 }
 
 export default App;

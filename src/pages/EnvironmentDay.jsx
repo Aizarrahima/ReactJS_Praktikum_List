@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import CardEnvironment from "../components/CardEnvironment";
+import Card from "../components/CardEnvironment";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class EnvironmentDay extends Component {
@@ -100,7 +100,7 @@ class EnvironmentDay extends Component {
                 />
                 <div className="row">
                     {this.state.filterAgenda.map((item, index) => (
-                        <CardEnvironment
+                        <Card
                             key={index}
                             nama={item.nama}
                             tanggal={item.tanggal}
