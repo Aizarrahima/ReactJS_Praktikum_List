@@ -131,7 +131,7 @@ class EnvironmentDay extends Component {
                                     onChange={ ev => this.setState({nama: ev.target.value})} required />
                                     
                                     Tanggal Event
-                                    <input type="text" className="form-control mb-2"
+                                    <input type="date" className="form-control mb-2"
                                     value={this.state.tanggal}
                                     onChange={ ev => this.setState({tanggal: ev.target.value})} required />
                                     
