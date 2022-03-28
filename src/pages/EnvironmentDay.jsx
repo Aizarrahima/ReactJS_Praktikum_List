@@ -93,6 +93,7 @@ class EnvironmentDay extends Component {
     render() {
         return (
             <div className="container"><br />
+                <h1 className="text-center">Events</h1>
                 <input type="text" className="form-control my-2" placeholder="Pencarian"
                     value={this.state.keyword}
                     onChange={ev => this.setState({ keyword: ev.target.value })}

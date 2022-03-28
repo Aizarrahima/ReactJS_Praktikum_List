@@ -2,6 +2,7 @@ import React from "react";
 import Main from "./Main";
 import { NavLink } from "react-router-dom";
 
+
 class App extends React.Component {
   render() {
     return (
@@ -33,13 +34,8 @@ class App extends React.Component {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/products">
-                    Products
-                  </NavLink>
-                </li>
-                <li className="nav-item">
                   <NavLink className="nav-link" to="/cart">
-                    Cart
+                    Shopping Cart
                   </NavLink>
                 </li>
               </ul>
